@@ -1,4 +1,4 @@
-package vargas.fabian.bl;
+package vargas.fabian.bl.entities;
 
 public abstract class Persona {
     protected String id;
@@ -7,7 +7,15 @@ public abstract class Persona {
 
     public Persona(){}
 
-    public Persona(String id, String nombre, String telefono){
+    // Constructor para NUEVOS objetos
+    public Persona(String id, String nombre, String telefono) {
+        this.id = id;
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
+
+    // Constructor para objetos EXISTENTES
+    public Persona(String id, String nombre, String telefono, boolean esExistente) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
